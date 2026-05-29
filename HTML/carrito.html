@@ -1,0 +1,134 @@
+<<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería de Arte - Carrito</title>
+
+    <!-- Iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR-->
+    <nav class="navbar">
+      <div class="nav-left">
+        <i class="fa-solid fa-store"></i>
+        <i class="fa-solid fa-bars menu-icon"></i>
+      </div>
+    </nav>
+
+    <!-- MENÚ DESPLEGABLE -->
+    <div class="menu-dropdown">
+      <a href="login.html">Inicio</a>
+      <a href="perfil.html">Perfil</a>
+
+      <div class="submenu">
+        <a href="explorar-obras.html" class="submenu-btn">Explorar Obras ▾</a>
+        <div class="submenu-content">
+          <a href="explorar-obras.html">Todas las Obras</a>
+          <a href="explorar-obras.html">Obras Nuevas</a>
+          <a href="explorar-obras.html">Más Vendidas</a>
+        </div>
+      </div>
+      <a href="sobre-nosotros.html">Sobre Nosotros</a>
+      <a href="ayuda.html">Ayuda</a>
+    </div>
+
+    <!-- Carrito -->
+    <main class="carrito-container">
+      <section class="lista-productos">
+        <div class="producto">
+          <img src="../images/arte1.jpeg" alt="Obra 1" class="img-producto" />
+          <div class="info-producto">
+            <h3 class="nombre">Obra abstracta</h3>
+            <p class="precio" data-precio="250000">250.000 COP</p>
+            <div class="cantidad-control">
+              <button class="menos">−</button>
+              <input type="number" value="1" class="input-cantidad" min="1" />
+              <button class="mas">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="producto">
+          <img src="../images/arte2.jpeg" alt="Obra 2" class="img-producto" />
+          <div class="info-producto">
+            <h3 class="nombre">Retrato moderno</h3>
+            <p class="precio" data-precio="180000">180.000 COP</p>
+            <div class="cantidad-control">
+              <button class="menos">−</button>
+              <input type="number" value="1" class="input-cantidad" min="1" />
+              <button class="mas">+</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="detalle-compra">
+        <h2>Resumen de compra</h2>
+        <p>Subtotal: <span id="subtotal">0 COP</span></p>
+        <label for="envio">Envío:</label>
+        <select id="envio">
+          <option value="0">Seleccionar</option>
+          <option value="15000">Envío estándar (15.000 COP)</option>
+          <option value="30000">Envío express (30.000 COP)</option>
+        </select>
+        <p>Valor envío: <span id="envioValor">0 COP</span></p>
+        <p class="total">Total: <span id="total">0 COP</span></p>
+        <button class="btn-comprar">Finalizar compra</button>
+      </aside>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <i class="fas fa-store footer-logo"></i>
+          <p>
+            Interfaz diseñada para exhibir, comprar y vender obras de arte de
+            manera fácil y segura.
+          </p>
+          <p>Síguenos en nuestras redes</p>
+          <div class="social-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Explorar</h3>
+          <div class="footer-links">
+            <a href="login.html" class="footer-link">Inicio</a>
+            <a href="sobre-nosotros.html" class="footer-link">Sobre Nosotros</a>
+            <a href="explorar-obras.html" class="footer-link">Explorar Obras</a>
+            <a href="ayuda.html" class="footer-link">Ayuda</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Únete a nuestro boletín semanal</h3>
+          <p>
+            Recibe promociones exclusivas y actualizaciones directamente en tu
+            correo.
+          </p>
+          <div class="newsletter">
+            <input type="email" placeholder="Escribe tu correo aquí" />
+            <button>Suscríbete</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
