@@ -1,0 +1,136 @@
+﻿<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería de Arte - Inicio</title>
+
+    <!-- Iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../CSS/styles.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="login.html" class="nav-logo">Galería de Arte</a>
+        <i class="fa-solid fa-bars menu-icon"></i>
+      </div>
+
+      <div class="nav-right">
+        <a href="login.html" class="login-link">Inicio de sesión</a>
+        <a href="registro.html" class="btn-register">Registro</a>
+      </div>
+    </nav>
+
+    <!-- MENÚ DESPLEGABLE -->
+    <div class="menu-dropdown">
+      <a href="login.html">Inicio</a>
+      <a href="explorar-obras.html">Explorar Obras</a>
+      <a href="sobre-nosotros.html">Sobre Nosotros</a>
+      <a href="ayuda.html">Ayuda</a>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="container">
+      <div class="carousel">
+        <div class="slides fade">
+          <img src="../Imagenes/arte1.jpeg" alt="Arte 1" />
+        </div>
+        <div class="slides fade">
+          <img src="../Imagenes/arte2.jpeg" alt="Arte 2" />
+        </div>
+        <div class="slides fade">
+          <img src="../Imagenes/arte3.jpeg" alt="Arte 3" />
+        </div>
+      </div>
+
+      <!-- Login -->
+      <div class="col-login">
+        <section class="login-section">
+          <div class="login-container">
+            <h1>Bienvenido</h1>
+            <form action="../api/login" method="post">
+              <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Correo electrónico"
+                  required
+                />
+              </div>
+              <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Contraseña"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn-login-main">
+                Iniciar sesión
+              </button>
+              <a href="recuperar-password.html" class="forgot-password"
+                >¿Olvidaste tu contraseña?</a
+              >
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <i class="fas fa-store footer-logo"></i>
+          <p>
+            Interfaz diseñada para exhibir, comprar y vender obras de arte de
+            manera fácil y segura.
+          </p>
+          <p>Síguenos en nuestras redes</p>
+          <div class="social-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Explorar</h3>
+          <div class="footer-links">
+            <a href="login.html" class="footer-link">Inicio</a>
+            <a href="sobre-nosotros.html" class="footer-link">Sobre Nosotros</a>
+            <a href="explorar-obras.html" class="footer-link">Explorar Obras</a>
+            <a href="ayuda.html" class="footer-link">Ayuda</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Únete a nuestro boletín semanal</h3>
+          <p>
+            Recibe promociones exclusivas y actualizaciones directamente en tu
+            correo.
+          </p>
+          <div class="newsletter">
+            <input type="email" placeholder="Escribe tu correo aquí" />
+            <button>Suscríbete</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../JS/menu.js"></script>
+    <script src="../JS/carousel.js"></script>
+  </body>
+</html>

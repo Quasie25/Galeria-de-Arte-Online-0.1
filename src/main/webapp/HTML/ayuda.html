@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería de Arte - Ayuda</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../CSS/styles.css" />
+  </head>
+  <body class="help-page">
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="login.html" class="nav-logo">Galería de Arte</a>
+        <i class="fa-solid fa-bars menu-icon"></i>
+      </div>
+      <div class="nav-right">
+        <a href="login.html" class="login-link">Inicio de sesión</a>
+        <a href="registro.html" class="btn-primary">Registro</a>
+      </div>
+    </nav>
+
+    <div class="menu-dropdown">
+      <a href="login.html">Inicio</a>
+      <a href="perfil.html">Perfil</a>
+      <div class="submenu">
+        <a href="explorar-obras.html" class="submenu-btn">Explorar Obras ▾</a>
+        <div class="submenu-content">
+          <a href="explorar-obras.html">Todas las Obras</a>
+          <a href="explorar-obras.html">Obras Nuevas</a>
+          <a href="explorar-obras.html">Más Vendidas</a>
+        </div>
+      </div>
+      <a href="sobre-nosotros.html">Sobre Nosotros</a>
+      <a href="ayuda.html">Ayuda</a>
+    </div>
+
+    <main class="help-main">
+      <section class="help-hero">
+        <i
+          class="fa-solid fa-circle-question"
+          style="font-size: 40px; color: #c77dff; margin-bottom: 15px"
+        ></i>
+        <h1>Centro de Ayuda</h1>
+        <p>Encuentra respuestas rápidas a las preguntas más frecuentes.</p>
+        <div class="help-categories">
+          <a href="#cuenta" class="help-cat-btn">Mi Cuenta</a>
+          <a href="#compras" class="help-cat-btn">Compras</a>
+          <a href="#obras" class="help-cat-btn">Publicar Obras</a>
+          <a href="#soporte-faq" class="help-cat-btn">Soporte</a>
+        </div>
+      </section>
+
+      <section id="cuenta" class="help-section">
+        <h2><i class="fa-solid fa-user"></i> Mi Cuenta</h2>
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>¿Cómo creo una cuenta?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Haz clic en Registro en la barra superior, completa tus datos
+                personales, confirma tu correo electrónico. El proceso tarda
+                menos de dos minutos y es completamente gratuito.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>¿Olvidé mi contraseña, qué hago?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Ve a Recuperar Contraseña, ingresa tu correo registrado y
+                recibirás un enlace para restablecerla. El enlace expira en 24
+                horas por seguridad.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>¿Puedo cambiar mi nombre de usuario?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Sí. Entra a tu Perfil, edita tu información y guarda los
+                cambios. Ten en cuenta que cambios frecuentes pueden generar
+                confusión en la comunidad.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>¿Cómo verifico mi identidad?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                En tu perfil encontrarás la opción de verificación. Sube un
+                documento de identidad válido y te procesaremos la solicitud en
+                24-48 horas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="compras" class="help-section">
+        <h2><i class="fa-solid fa-shopping-cart"></i> Compras</h2>
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>¿Cómo agrego una obra al carrito?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                En cada obra, haz clic en el ícono de carrito. Luego ve a tu
+                carrito, revisa los detalles y procede al checkout para
+                completar la compra.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>¿Qué métodos de pago aceptan?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Aceptamos tarjetas de crédito/débito (Visa, Mastercard, AmEx),
+                transferencias bancarias y billeteras digitales. Todos los pagos
+                están encriptados y son seguros.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>¿Cuánto tiempo toma la entrega?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                El tiempo depende de tu ubicación y el tipo de envío
+                seleccionado. Estándar: 5-10 días. Express: 2-3 días. Digital:
+                inmediato.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>¿Puedo devolver una compra?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Sí, máximo en 7 días hábiles después de la entrega, si el
+                producto llega dañado o no cumple con la descripción. Respecto a
+                los reembolso, se haran descontando los porcentajes
+                correspondientes a los bancos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="obras" class="help-section">
+        <h2><i class="fa-solid fa-image"></i> Publicar Obras</h2>
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>¿Cómo publico una obra nueva?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Ve a tu perfil, haz clic en Publicar Obra, completa los datos
+                (título, descripción, precio), sube una imagen de alta calidad y
+                confirma. Tu obra será revisada en 24 horas.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>¿Qué tamaño y formato deben tener las imágenes?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Mínimo 1200x1200px. Formatos aceptados: JPG, PNG, WebP. Máximo
+                50MB. Recomendamos imágenes nítidas con buena iluminación para
+                mejor presentación.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>¿Puedo editar una obra ya publicada?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Sí. Accede a tu portafolio, selecciona la obra y edita título,
+                descripción o precio. La imagen principal no puede cambiar una
+                vez publicada.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>¿Cómo se calcula la comisión de venta?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Tomamos una comisión del 15% por cada venta completada. El 85%
+                restante se deposita en tu cuenta. No hay cuota de publicación.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="soporte-faq" class="help-section">
+        <h2><i class="fa-solid fa-headset"></i> Soporte</h2>
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>¿Cómo contacto al equipo de soporte?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Puedes escribirnos a soporte@galeria-arte.com o usar el
+                formulario de contacto en esta página. Respondemos en máximo 24
+                horas.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>¿Reporto una obra inapropiada?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                En cada obra hay un botón de reporte. Haz clic, describe el
+                problema y envía. Nuestro equipo de moderación revisará en 48
+                horas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="help-contact" id="contacto-directo">
+        <div class="help-contact-card">
+          <i
+            class="fa-solid fa-headset help-contact-icon"
+            style="font-size: 30px; margin-bottom: 15px; color: #6a00f4"
+          ></i>
+          <h2>¿Necesitas más ayuda?</h2>
+          <p>
+            Nuestro equipo de soporte está disponible de lunes a viernes de 9
+            a.m. a 6 p.m.
+          </p>
+          <div class="help-contact-links" style="margin-top: 20px">
+            <a href="mailto:soporte@galeria-arte.com" class="btn-primary">
+              <i class="fa-solid fa-envelope"></i> Escribir al soporte
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <i class="fas fa-store footer-logo"></i>
+          <p>
+            Interfaz diseñada para exhibir, comprar y vender obras de arte de
+            manera fácil y segura.
+          </p>
+          <p>Síguenos en nuestras redes</p>
+          <div class="social-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Explorar</h3>
+          <div class="footer-links">
+            <a href="login.html" class="footer-link">Inicio</a>
+            <a href="sobre-nosotros.html" class="footer-link">Sobre Nosotros</a>
+            <a href="explorar-obras.html" class="footer-link">Explorar Obras</a>
+            <a href="ayuda.html" class="footer-link">Ayuda</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Únete a nuestro boletín semanal</h3>
+          <p>
+            Recibe promociones exclusivas y actualizaciones directamente en tu
+            correo.
+          </p>
+          <div class="newsletter">
+            <input type="email" placeholder="Escribe tu correo aquí" />
+            <button
+              style="
+                padding: 10px;
+                background: #6a00f4;
+                color: white;
+                border: none;
+                cursor: pointer;
+              "
+            >
+              Suscríbete
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../JS/menu.js"></script>
+    <script src="../JS/faq.js"></script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+﻿<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería de Arte - Carrito</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../CSS/styles.css" />
+  </head>
+  <body data-proteger="true">
+    <div id="navbar-placeholder"></div>
+
+    <main class="carrito-container">
+      <h1>Tu Carrito</h1>
+
+      <div id="carrito-vacio" style="display: none">
+        <p>
+          Tu carrito está vacío. <a href="explorar-obras.html">Ver obras</a>
+        </p>
+      </div>
+
+      <section class="lista-productos">
+        <div class="producto" data-id="1">
+          <img src="../Imagenes/arte1.jpeg" alt="Obra 1" class="img-producto" />
+          <div class="info-producto">
+            <h3 class="nombre">Obra abstracta</h3>
+            <p class="precio" data-precio="250000">250.000 COP</p>
+            <div class="cantidad-control">
+              <button class="menos">−</button>
+              <input
+                type="number"
+                value="1"
+                class="input-cantidad"
+                min="1"
+                readonly
+              />
+              <button class="mas">+</button>
+            </div>
+          </div>
+          <button class="btn-eliminar" title="Eliminar obra">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+
+        <div class="producto" data-id="2">
+          <img src="../Imagenes/arte2.jpeg" alt="Obra 2" class="img-producto" />
+          <div class="info-producto">
+            <h3 class="nombre">Retrato moderno</h3>
+            <p class="precio" data-precio="180000">180.000 COP</p>
+            <div class="cantidad-control">
+              <button class="menos">−</button>
+              <input
+                type="number"
+                value="1"
+                class="input-cantidad"
+                min="1"
+                readonly
+              />
+              <button class="mas">+</button>
+            </div>
+          </div>
+          <button class="btn-eliminar" title="Eliminar obra">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+      </section>
+
+      <aside class="detalle-compra">
+        <h2>Resumen de compra</h2>
+        <div class="resumen-linea">
+          <span>Subtotal:</span> <span id="subtotal">0 COP</span>
+        </div>
+
+        <label for="envio">Envío:</label>
+        <select id="envio">
+          <option value="0">Seleccionar envío</option>
+          <option value="15000">Estándar (15.000 COP)</option>
+          <option value="30000">Express (30.000 COP)</option>
+        </select>
+
+        <div class="resumen-linea">
+          <span>Envío:</span> <span id="envioValor">0 COP</span>
+        </div>
+
+        <div class="resumen-linea">
+          <span>Total:</span> <span id="total" class="total-precio">0 COP</span>
+        </div>
+
+        <button
+          class="btn-comprar"
+          onclick="window.location.href = 'checkout-envio.html'"
+        >
+          Finalizar compra
+        </button>
+      </aside>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="../JS/componentes.js"></script>
+    <script src="../JS/carrito.js"></script>
+    <script src="../JS/session-ui.js"></script>
+  </body>
+</html>
