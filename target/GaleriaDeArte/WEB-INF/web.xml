@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <display-name>Galeria De Arte</display-name>
+
+    <session-config>
+        <session-timeout>30</session-timeout>
+        <cookie-config>
+            <http-only>true</http-only>
+        </cookie-config>
+    </session-config>
+
+    <welcome-file-list>
+        <welcome-file>BusquedaServlet</welcome-file>
+        <welcome-file>HTML/explorar-obras.html</welcome-file>
+    </welcome-file-list>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/HTML/404.html</location>
+    </error-page>
+
+    <filter>
+        <filter-name>FiltroAutenticacion</filter-name>
+        <filter-class>com.galeria.filtros.FiltroAutenticacion</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>FiltroAutenticacion</filter-name>
+        <url-pattern>/HTML/perfil.html</url-pattern>
+        <url-pattern>/HTML/subir-obra.html</url-pattern>
+        <url-pattern>/HTML/carrito.html</url-pattern>
+        <url-pattern>/HTML/admin-panel.html</url-pattern>
+        <url-pattern>/api/admin/*</url-pattern>
+        <url-pattern>/admin/*</url-pattern>
+        <url-pattern>/WEB-INF/jsp/*</url-pattern>
+    </filter-mapping>
+
+    <!-- Servlets adicionales registrados por anotación @WebServlet -->
+    <!-- LoginServlet        → /api/login          -->
+    <!-- SubirObraServlet    → /api/obra/subir      -->
+    <!-- ObraDetalleServlet  → /api/obra            -->
+    <!-- SessionServlet      → /api/session         -->
+    <!-- CheckoutServlet     → /api/checkout/validar -->
+
+</web-app>

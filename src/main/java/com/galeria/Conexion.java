@@ -1,4 +1,4 @@
-package com.galeria; // Asegúrate de que coincida con tu estructura
+package com.galeria;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,7 +9,7 @@ public class Conexion {
         try {
             // Cargar el driver
             Class.forName("com.mysql.cj.jdbc.Driver");
-            // CONECTAR: cambia 'tu_usuario' y 'tu_contraseña' por los de tu MySQL
+            // CONECTAR
             con = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/galeria_arte_0_1?useSSL=false&serverTimezone=UTC", "root",
                     "Root123456789*");

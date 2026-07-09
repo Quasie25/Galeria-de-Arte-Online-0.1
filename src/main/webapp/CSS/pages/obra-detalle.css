@@ -1,0 +1,98 @@
+/* =============================================================
+   OBRA DETALLE — Página de detalle de obra
+   Nota: el @media (700px) incluye .form-row que
+   también aplica al formulario de checkout.
+   ============================================================= */
+
+/* ============================================================
+   OBRA DETALLE
+   ============================================================ */
+.obra-detalle-main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px 60px;
+}
+
+.obra-detalle-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.obra-imagen-container img {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  max-height: 520px;
+}
+
+.obra-info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.obra-info h1 {
+  font-size: 2rem;
+  color: #e0c3fc;
+}
+
+.obra-artista {
+  color: #aaa;
+  font-size: 0.95rem;
+}
+
+.obra-descripcion {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.obra-precio {
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #6a00f4, #c77dff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.obra-acciones {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.btn-favorito {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(199, 125, 255, 0.5);
+  background: transparent;
+  color: #c77dff;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.btn-favorito:hover {
+  background: rgba(199, 125, 255, 0.1);
+}
+
+.btn-eliminar-obra {
+  border-color: rgba(255, 100, 100, 0.4);
+  color: #ff6464;
+}
+
+.btn-eliminar-obra:hover {
+  background: rgba(255, 100, 100, 0.1);
+}
+
+@media (max-width: 700px) {
+  .obra-detalle-hero {
+    grid-template-columns: 1fr;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

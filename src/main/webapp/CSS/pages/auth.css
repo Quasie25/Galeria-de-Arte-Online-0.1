@@ -1,0 +1,227 @@
+/* =============================================================
+   AUTH — Login, Registro y Recuperar contraseña
+   ============================================================= */
+
+/* Login */
+
+.login-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  backdrop-filter: none;
+}
+
+.login-container {
+  text-align: center;
+  background: none;
+  box-shadow: none;
+  padding: 40px;
+}
+
+.login-container h1 {
+  font-size: 2.5em;
+  color: #fcfcfc;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 50px;
+  margin: 15px 0;
+  padding: 10px 20px;
+}
+
+.input-group i {
+  color: #6a00f4;
+  margin-right: 5px;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.btn-login-main {
+  background: #6a00f4;
+  color: #fff;
+  border: none;
+  padding: 12px 50px;
+  border-radius: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-login-main:hover {
+  background: #3d006f;
+}
+
+.forgot-password {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.forgot-password:hover {
+  color: #6a00f4;
+  text-decoration: underline;
+}
+
+/* Registro */
+.register-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+.register-container {
+  text-align: center;
+  background: transparent;
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  max-width: 400px;
+  width: 100%;
+}
+
+.register-container h1 {
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.register-note {
+  margin-top: 15px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.register-note a {
+  color: #6a00f4;
+  text-decoration: underline;
+}
+
+.register-note a:hover {
+  text-decoration: underline;
+}
+
+/* ── Overrides de navbar exclusivos para la página de registro ── */
+/* Estilos exclusivos para la página de registro */
+
+.registro-page .navbar .login-link {
+  background: #6a00f4;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.registro-page .navbar .login-link:hover {
+  background: #3d006f;
+}
+
+.registro-page .navbar .btn-register {
+  background: transparent;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.registro-page .navbar .btn-register:hover {
+  background: transparent;
+}
+
+/* ===== Recuperar Contraseña ===== */
+.recovery-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #54179a, #a36dff);
+  border-radius: 50%;
+  font-size: 2.2rem;
+  color: white;
+  margin: 0 auto 20px;
+}
+
+.recovery-subtitle {
+  color: #dbc6ff;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.recovery-form {
+  margin-bottom: 30px;
+}
+
+.recovery-info {
+  background: rgba(106, 0, 244, 0.15);
+  border-left: 3px solid #6a00f4;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.recovery-info p {
+  color: #f0e4ff;
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+.recovery-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #dbc6ff;
+  font-size: 0.95rem;
+}
+
+.recovery-info li {
+  padding: 5px 0;
+}
+
+.recovery-info li:before {
+  content: '• ';
+  color: #6a00f4;
+  margin-right: 8px;
+}
+
+.recovery-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(106, 0, 244, 0.3);
+}
+
+.recovery-link {
+  color: #6a00f4;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.recovery-link:hover {
+  color: #c77dff;
+  text-decoration: underline;
+}

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería de Arte - Explorar Obras</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../CSS/main.css" />
+  </head>
+
+  <body>
+    <!-- El navbar y el menú los inyecta componentes.js automáticamente -->
+    <div id="navbar-placeholder"></div>
+
+    <main class="main-section">
+      <section class="main-header">
+        <h1>Explora nuestras piezas artísticas</h1>
+        <p>Encuentra piezas de diversos artistas.</p>
+      </section>
+
+      <section class="tabs-section">
+        <div class="tabs">
+          <button class="tab active" data-tab="individuales">
+            Obras Individuales
+            <span class="badge" id="badge-individuales">...</span>
+          </button>
+        </div>
+      </section>
+
+      <div class="filtro-container">
+        <button id="abrirFiltro" class="btn-filtro">
+          <i class="fa-solid fa-filter"></i> Filtrar
+        </button>
+      </div>
+
+      <section class="container">
+        <!-- Las tarjetas las genera galeria.js, no están escritas aquí -->
+        <div
+          id="contenido-individuales"
+          class="galeria tab-content active"
+        ></div>
+      </section>
+
+      <!-- Panel de filtros (ahora con IDs para que galeria.js los lea) -->
+      <aside id="panelFiltros" class="panel-filtros">
+        <div class="panel-header">
+          <h3>Filtrar</h3>
+          <button id="cerrarFiltro" class="close-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="panel-content">
+          <h4>Palabras Clave</h4>
+          <input
+            id="filtro-q"
+            type="text"
+            placeholder="Ej: óleo, abstracto..."
+          />
+
+          <h4>Rango de Precios</h4>
+          <input
+            id="filtro-precio"
+            type="range"
+            min="0"
+            max="5000000"
+            step="50000"
+            value="5000000"
+          />
+          <p id="filtro-precio-label">Hasta $5.000.000</p>
+
+          <h4>Categoría</h4>
+          <select id="filtro-categoria">
+            <option value="">Todas</option>
+            <option value="Pintura">Pintura</option>
+            <option value="Escultura">Escultura</option>
+            <option value="Fotografía">Fotografía</option>
+            <option value="Técnica Mixta">Técnica Mixta</option>
+          </select>
+
+          <button
+            id="btn-aplicar-filtro"
+            class="btn-filtro"
+            style="margin-top: 1rem"
+          >
+            Aplicar filtro
+          </button>
+        </div>
+      </aside>
+    </main>
+
+    <!-- El footer lo inyecta componentes.js automáticamente -->
+    <div id="footer-placeholder"></div>
+
+    <!-- ORDEN IMPORTANTE: componentes primero, luego los demás -->
+    <script src="../JS/componentes.js"></script>
+    <script src="../JS/menu.js"></script>
+    <script src="../JS/filtros.js"></script>
+    <script src="../JS/session-ui.js"></script>
+    <script src="../JS/galeria.js"></script>
+  </body>
+</html>

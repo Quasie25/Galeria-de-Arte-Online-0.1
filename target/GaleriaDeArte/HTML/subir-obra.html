@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería de Arte - Subir Obras</title>
+
+    <!-- Iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../CSS/main.css" />
+  </head>
+
+  <body>
+    <!-- ======== NAVBAR ======== -->
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="login.html" class="nav-logo">Galería de Arte</a>
+        <i class="fa-solid fa-bars menu-icon"></i>
+      </div>
+    </nav>
+
+    <!-- MENÚ DESPLEGABLE -->
+    <div class="menu-dropdown">
+      <a href="login.html">Inicio</a>
+      <a href="perfil.html">Perfil</a>
+
+      <div class="submenu">
+        <a href="explorar-obras.html" class="submenu-btn">Explorar Obras ▾</a>
+        <div class="submenu-content">
+          <a href="explorar-obras.html">Todas las Obras</a>
+          <a href="explorar-obras.html">Obras Nuevas</a>
+          <a href="explorar-obras.html">Más Vendidas</a>
+        </div>
+      </div>
+
+      <a href="sobre-nosotros.html">Sobre Nosotros</a>
+      <a href="ayuda.html">Ayuda</a>
+    </div>
+
+    <!-- SECCIÓN DE PUBLICAR OBRA -->
+    <section class="publicar-section" data-rol="artista">
+      <div class="publicar-container">
+        <h1>Publicar Obra</h1>
+        <form
+          action="../api/obra/subir"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <div class="form-group">
+            <label>Título de la obra</label>
+            <input type="text" placeholder="Ej: Amanecer en la ciudad" />
+          </div>
+
+          <div class="form-group">
+            <label>Descripción</label>
+            <textarea placeholder="Describe tu obra..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Precio (COP)</label>
+            <input type="number" placeholder="Ej: 250000" />
+          </div>
+
+          <div class="form-group">
+            <label>Subir imagen</label>
+            <input type="file" accept="image/*" />
+          </div>
+
+          <button type="submit" class="btn-publicar">Publicar Obra</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <i class="fas fa-store footer-logo"></i>
+          <p>
+            Interfaz diseñada para exhibir, comprar y vender obras de arte de
+            manera fácil y segura.
+          </p>
+          <p>Síguenos en nuestras redes</p>
+          <div class="social-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Explorar</h3>
+          <div class="footer-links">
+            <a href="login.html" class="footer-link">Inicio</a>
+            <a href="sobre-nosotros.html" class="footer-link">Sobre Nosotros</a>
+            <a href="explorar-obras.html" class="footer-link">Explorar Obras</a>
+            <a href="ayuda.html" class="footer-link">Ayuda</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Únete a nuestro boletín semanal</h3>
+          <p>
+            Recibe promociones exclusivas y actualizaciones directamente en tu
+            correo.
+          </p>
+          <div class="newsletter">
+            <input type="email" placeholder="Escribe tu correo aquí" />
+            <button>Suscríbete</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../JS/menu.js"></script>
+    <script src="../JS/session-ui.js"></script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería de Arte - Datos de Envío</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../CSS/main.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="login.html" class="nav-logo">Galería de Arte</a>
+        <i class="fa-solid fa-bars menu-icon"></i>
+      </div>
+    </nav>
+
+    <div class="menu-dropdown">
+      <a href="login.html">Inicio</a>
+      <a href="perfil.html">Perfil</a>
+      <div class="submenu">
+        <a href="explorar-obras.html" class="submenu-btn">Explorar Obras ▾</a>
+        <div class="submenu-content">
+          <a href="explorar-obras.html">Todas las Obras</a>
+          <a href="explorar-obras.html">Obras Nuevas</a>
+          <a href="explorar-obras.html">Más Vendidas</a>
+        </div>
+      </div>
+      <a href="sobre-nosotros.html">Sobre Nosotros</a>
+      <a href="ayuda.html">Ayuda</a>
+    </div>
+
+    <main class="checkout-main">
+      <!-- Indicador de pasos -->
+      <div class="checkout-steps">
+        <div class="step active">
+          <span class="step-num">1</span>
+          <span class="step-label">Envío</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <span class="step-label">Pago</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <span class="step-label">Confirmación</span>
+        </div>
+      </div>
+
+      <section class="checkout-card">
+        <h2>Datos de Envío</h2>
+        <form id="form-envio" action="checkout-pago.html" method="get">
+          <div class="form-group">
+            <label>Nombre completo</label>
+            <input
+              type="text"
+              name="nombre"
+              placeholder="Ej: Juan Pérez"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>Dirección</label>
+            <input
+              type="text"
+              name="direccion"
+              placeholder="Calle 10 # 20-30"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>Ciudad</label>
+            <input type="text" name="ciudad" placeholder="Bogotá" required />
+          </div>
+          <div class="form-group">
+            <label>Teléfono</label>
+            <input
+              type="tel"
+              name="telefono"
+              placeholder="+57 300 000 0000"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>Tipo de envío</label>
+            <select name="envio" required>
+              <option value="15000">Estándar — $15.000 COP (3-5 días)</option>
+              <option value="30000">Express — $30.000 COP (1-2 días)</option>
+            </select>
+          </div>
+          <div class="checkout-actions">
+            <a href="carrito.html" class="btn-secundario"
+              >← Volver al carrito</a
+            >
+            <button type="submit" class="btn-publicar">
+              Continuar al pago →
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="../JS/menu.js"></script>
+  </body>
+</html>

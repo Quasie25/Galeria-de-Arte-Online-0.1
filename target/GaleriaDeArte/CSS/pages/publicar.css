@@ -1,0 +1,104 @@
+/* =============================================================
+   PUBLICAR — Formulario para subir nueva obra
+   ============================================================= */
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .publicar-container {
+    padding: 40px 25px;
+  }
+}
+
+/* Seccion publicar obra */
+
+.publicar-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  background: linear-gradient(90deg, #2a0055, #6a00f4, #c77dff);
+  min-height: 90vh;
+}
+
+.publicar-container {
+  background: rgba(17, 0, 30, 0.448);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 50px 60px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.publicar-container h1 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-size: 2em;
+  border-bottom: 2px solid #6a00f4;
+  padding-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: #d1c4e9;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  background: #fff;
+  outline: none;
+  color: #111;
+  resize: none;
+  transition: box-shadow 0.2s ease;
+}
+
+.form-group textarea {
+  min-height: 120px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  box-shadow: 0 0 5px #6a00f4;
+}
+
+.btn-publicar {
+  background: #6a00f4;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+}
+
+.btn-publicar:hover {
+  background: #2a0055;
+  transform: scale(1.03);
+}
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+  .publicar-container {
+    padding: 40px 25px;
+  }
+}

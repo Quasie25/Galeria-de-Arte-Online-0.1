@@ -1,0 +1,83 @@
+/* =============================================================
+   ERROR — Página 404
+   ============================================================= */
+
+/* ==========================================================================
+   SECCIÓN DE PÁGINA DE ERROR (404)
+   ========================================================================== */
+
+/* Contenedor principal del error */
+.error-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh; /* Asegura que ocupe la mayor parte de la pantalla entre navbar y footer */
+  background: linear-gradient(
+    135deg,
+    #1a0033,
+    #3b0066
+  ); /* Tonos más oscuros para mejorar el contraste */
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+/* Caja interna del mensaje (Centrado de elementos) */
+.container-error {
+  display: flex;
+  flex-direction: column; /* Alinea los elementos verticalmente (uno abajo del otro) */
+  align-items: center; /* Centra los elementos horizontalmente en el eje secundario */
+  text-align: center; /* Centra el texto */
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Icono de advertencia */
+.fa-solid.fa-triangle-exclamation {
+  font-size: 64px;
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+/* Título del error */
+.error-title {
+  font-size: 32px;
+  color: #ffffff;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+/* Texto descriptivo */
+.error-text {
+  font-size: 16px;
+  color: #e6dcff;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Botón "Volver al inicio" mejorado */
+.btn-error-return {
+  display: inline-block;
+  padding: 12px 32px;
+  color: #3b0066; /* Texto en color oscuro para legibilidad dentro del botón */
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none; /* Quita la línea de debajo (subrayado) */
+  border-radius: 25px; /* Bordes redondeados estilizados */
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+}
+
+/* Efecto al pasar el cursor sobre el botón */
+.btn-error-return:hover {
+  background-color: #e6dcff; /* Cambio de color sutil al pasar el mouse */
+  transform: translateY(-2px); /* Efecto de elevación ligera */
+}
+
+/* Corrección general para quitar el subrayado de otros botones del sitio si es necesario */
+.navbar a,
+.menu-dropdown a,
+.footer-links a {
+  text-decoration: none;
+}

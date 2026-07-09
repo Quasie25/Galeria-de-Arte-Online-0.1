@@ -1,0 +1,266 @@
+/* =============================================================
+   NAVBAR — Barra de navegación, menú desplegable,
+   submenú, barra de búsqueda e íconos de acción
+   ============================================================= */
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 1000;
+  background-color: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 2px solid #3d006f;
+  box-sizing: border-box;
+}
+
+.nav-left i {
+  font-size: 20px;
+  color: #6a00f4;
+  cursor: pointer;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  background: linear-gradient(135deg, #fff 40%, #c77dff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-logo:hover {
+  opacity: 0.8;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.login-link {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-register {
+  background: #6a00f4;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-register:hover {
+  background: #3d006f;
+}
+
+/* Menú Desplegable */
+.menu-dropdown {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 80%;
+  background: rgba(17, 0, 30, 0.95);
+  backdrop-filter: blur(8px);
+  border-radius: 0 0 16px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  z-index: 999;
+}
+
+/* Cuando está activo */
+.menu-dropdown.active {
+  max-height: 1000px;
+  overflow-y: auto;
+}
+
+/* Enlaces del menú */
+.menu-dropdown a {
+  color: #fff;
+  padding: 14px 20px;
+  text-decoration: none;
+  width: 100%;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(17, 0, 30, 0.95);
+  transition:
+    background 0.3s ease,
+    padding-left 0.3s ease;
+}
+
+.menu-dropdown a:hover {
+  background: linear-gradient(90deg, #6a00f4, #c77dff);
+  padding-left: 30px;
+}
+
+/* Submenú */
+.submenu {
+  width: 100%;
+  position: relative;
+}
+
+/* Botón principal del submenú */
+.submenu-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: #fff;
+  background: transparent;
+  padding: 14px 20px;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(17, 0, 30, 0.95);
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    padding-left 0.3s ease;
+}
+
+.submenu-btn:hover {
+  background: linear-gradient(90deg, #6a00f4, #c77dff);
+  padding-left: 30px;
+}
+
+/* Contenido del submenú */
+.submenu-content {
+  display: none;
+  flex-direction: column;
+  background: rgba(25, 0, 60, 0.95);
+  border-left: 3px solid #7300ff;
+  border-radius: 0 0 10px 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Enlaces dentro del submenú */
+.submenu-content a {
+  padding: 12px 40px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition:
+    background 0.3s ease,
+    padding-left 0.3s ease;
+}
+
+.submenu-content a:hover {
+  background: rgba(62, 0, 163, 0.311);
+  padding-left: 50px;
+}
+
+/* Mostrar el submenú al hacer hover */
+.submenu:hover .submenu-content {
+  display: flex;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Barra de búsqueda--- */
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #0e0e11;
+  border: 1px solid #3d006f;
+  border-radius: 20px;
+  padding: 6px 10px;
+  transition: all 0.3s ease;
+  width: 180px;
+  margin-left: 20px;
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 0;
+  opacity: 0;
+  font-size: 14px;
+  transition:
+    width 0.4s ease,
+    opacity 0.4s ease;
+}
+
+.search-bar:hover input,
+.search-bar input:focus {
+  width: 140px;
+  opacity: 1;
+}
+
+.search-icon {
+  color: #6a00f4;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.search-icon:hover {
+  color: #c77dff;
+}
+
+/* --- Íconos de la derecha carrito y favoritos--- */
+.nav-right .icon-link {
+  color: #6a00f4;
+  font-size: 18px;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.nav-right .icon-link:hover {
+  transform: scale(1.15);
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+  .search-bar {
+    width: auto;
+  }
+
+  .search-bar:hover input {
+    width: 100px;
+  }
+}

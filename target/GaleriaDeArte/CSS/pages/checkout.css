@@ -1,0 +1,151 @@
+/* =============================================================
+   CHECKOUT — Pasos, tarjetas y formulario de pago
+   ============================================================= */
+
+/* ============================================================
+   CHECKOUT — pasos, tarjetas y formulario
+   ============================================================ */
+.checkout-main {
+  max-width: 680px;
+  margin: 40px auto;
+  padding: 0 20px 60px;
+}
+
+.checkout-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 36px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.step-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #ccc;
+  transition: all 0.3s;
+}
+
+.step.active .step-num {
+  background: linear-gradient(135deg, #6a00f4, #c77dff);
+  border-color: transparent;
+  color: #fff;
+}
+
+.step.done .step-num {
+  background: #4caf50;
+  border-color: transparent;
+  color: #fff;
+}
+
+.step-label {
+  font-size: 0.75rem;
+  color: #aaa;
+}
+
+.step.active .step-label,
+.step.done .step-label {
+  color: #e0c3fc;
+}
+
+.step-line {
+  flex: 1;
+  max-width: 60px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.15);
+  margin-bottom: 18px;
+}
+
+.step-line.done {
+  background: #4caf50;
+}
+
+.checkout-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 36px 32px;
+}
+
+.checkout-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 28px;
+  color: #e0c3fc;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.pago-bloque {
+  margin-top: 8px;
+}
+
+.checkout-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+  gap: 12px;
+}
+
+.btn-secundario {
+  color: #c77dff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 10px 16px;
+  border: 1px solid rgba(199, 125, 255, 0.4);
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.btn-secundario:hover {
+  background: rgba(199, 125, 255, 0.1);
+}
+
+/* Confirmación */
+.confirmacion-card {
+  text-align: center;
+}
+
+.confirmacion-icono {
+  font-size: 4rem;
+  color: #4caf50;
+  margin-bottom: 16px;
+}
+
+.confirmacion-msg {
+  color: #ccc;
+  margin-bottom: 28px;
+  font-size: 1rem;
+}
+
+.resumen-pedido {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.resumen-pedido h3 {
+  margin-bottom: 16px;
+  color: #e0c3fc;
+}

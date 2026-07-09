@@ -1,0 +1,174 @@
+﻿<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería de Arte - Perfil</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../CSS/main.css" />
+  </head>
+
+  <body class="profile-page">
+    <div id="navbar-placeholder"></div>
+
+    <main class="profile-main">
+      <section class="profile-shell">
+        <header class="profile-cover">
+          <div class="profile-cover-overlay"></div>
+        </header>
+
+        <section class="profile-header-card">
+          <div class="profile-avatar" aria-label="Avatar del artista">AM</div>
+
+          <div class="profile-identity">
+            <h1>Usuario</h1>
+            <p class="profile-handle">@usuario.art</p>
+            <p class="profile-location">
+              <i class="fa-solid fa-location-dot"></i>
+              Bogotá, Colombia
+            </p>
+          </div>
+
+          <div class="profile-actions">
+            <a
+              href="subir-obra.html"
+              class="profile-btn profile-btn-primary"
+              data-rol="artista"
+            >
+              >Publicar obra</a
+            >
+            <a href="explorar-obras.html" class="profile-btn profile-btn-ghost"
+              >Explorar</a
+            >
+          </div>
+        </section>
+
+        <section class="profile-metrics">
+          <article class="metric-item">
+            <span class="metric-number">128</span>
+            <span class="metric-label">Obras</span>
+          </article>
+          <article class="metric-item">
+            <span class="metric-number">4.2k</span>
+            <span class="metric-label">Seguidores</span>
+          </article>
+          <article class="metric-item">
+            <span class="metric-number">289</span>
+            <span class="metric-label">Siguiendo</span>
+          </article>
+          <article class="metric-item">
+            <span class="metric-number">4.9</span>
+            <span class="metric-label">Calificación</span>
+          </article>
+        </section>
+
+        <section class="profile-tabs">
+          <button class="tab active" type="button">Portafolio</button>
+          <button class="tab" type="button">Destacadas</button>
+          <button class="tab" type="button">Sobre mí</button>
+        </section>
+
+        <section class="profile-content-grid">
+          <aside class="profile-bio-card">
+            <h2>Biografía</h2>
+            <p>
+              Artista visual enfocada en abstracción contemporánea. Trabajo con
+              técnicas mixtas y series conceptuales inspiradas en paisaje
+              urbano.
+            </p>
+
+            <div class="profile-tags">
+              <span>#Acrílico</span>
+              <span>#TécnicaMixta</span>
+              <span>#ArteContemporáneo</span>
+            </div>
+
+            <h3>Contacto</h3>
+            <ul class="profile-contact-list">
+              <li><i class="fa-solid fa-envelope"></i> usuario@galeria.com</li>
+              <li><i class="fa-solid fa-globe"></i> usuarioencuestion.art</li>
+              <li>
+                <i class="fa-brands fa-instagram"></i> @usuarioencuestion.art
+              </li>
+            </ul>
+          </aside>
+
+          <div class="profile-gallery-grid">
+            <article class="card-obra">
+              <img src="../Imagenes/arte1.jpeg" alt="Obra 1" />
+              <h2>Nombre Obra</h2>
+              <p class="descripcion">Descripcion 1</p>
+              <p class="precio">$260.000</p>
+              <div class="acciones">
+                <a
+                  href="carrito.html"
+                  class="icon-link"
+                  aria-label="Agregar al carrito"
+                  ><i class="fa-solid fa-cart-plus"></i
+                ></a>
+                <a
+                  href="explorar-obras.html"
+                  class="icon-link"
+                  aria-label="Ver más"
+                ></a>
+              </div>
+            </article>
+
+            <article class="card-obra">
+              <img src="../Imagenes/arte2.jpeg" alt="Obra 2" />
+              <h2>Nombre Obra</h2>
+              <p class="descripcion">Descripcion 2</p>
+              <p class="precio">$190.000</p>
+              <div class="acciones">
+                <a
+                  href="carrito.html"
+                  class="icon-link"
+                  aria-label="Agregar al carrito"
+                  ><i class="fa-solid fa-cart-plus"></i
+                ></a>
+                <a
+                  href="explorar-obras.html"
+                  class="icon-link"
+                  aria-label="Ver más"
+                  ><i class="fa-solid fa-eye"></i
+                ></a>
+              </div>
+            </article>
+
+            <article class="card-obra">
+              <img src="../Imagenes/arte3.jpeg" alt="Obra 3" />
+              <h2>Nombre Obra</h2>
+              <p class="descripcion">Descripcion 3</p>
+              <p class="precio">$310.000</p>
+              <div class="acciones">
+                <a
+                  href="carrito.html"
+                  class="icon-link"
+                  aria-label="Agregar al carrito"
+                  ><i class="fa-solid fa-cart-plus"></i
+                ></a>
+                <a
+                  href="explorar-obras.html"
+                  class="icon-link"
+                  aria-label="Ver más"
+                ></a>
+              </div>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../JS/componentes.js"></script>
+    <script src="../JS/menu.js"></script>
+    <script src="../JS/session-ui.js"></script>
+  </body>
+</html>

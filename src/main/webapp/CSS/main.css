@@ -1,0 +1,18 @@
+/* ── Compartidos: se cargan en todas las páginas ── */
+@import 'partials/base.css';
+@import 'partials/navbar.css';
+@import 'partials/layout.css';
+@import 'partials/footer.css';
+
+/* ── Por página / sección ── */
+@import 'pages/auth.css';
+@import 'pages/galeria.css';
+@import 'pages/carrito.css';
+@import 'pages/publicar.css';
+@import 'pages/profile.css';
+@import 'pages/about.css';
+@import 'pages/help.css';
+@import 'pages/checkout.css';
+@import 'pages/obra-detalle.css';
+@import 'pages/admin.css';
+@import 'pages/error.css';

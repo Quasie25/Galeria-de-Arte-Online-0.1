@@ -1,0 +1,165 @@
+/* =============================================================
+   HELP — Página de ayuda y FAQ
+   ============================================================= */
+
+/* ===== Ayuda - Help Page ===== */
+.help-page {
+  background:
+    radial-gradient(circle at top right, #a06dff55, transparent 40%),
+    linear-gradient(120deg, #1a0830, #3d1472 55%, #6a00f4);
+}
+
+.help-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 4%;
+}
+
+.help-hero {
+  text-align: center;
+  padding: 60px 30px;
+  background: rgba(8, 8, 14, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+
+.help-hero i {
+  font-size: 3rem;
+  color: #c77dff;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.help-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #f0e4ff;
+}
+
+.help-hero p {
+  color: #d6c2fa;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.help-categories {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.help-cat-btn {
+  background: #6a00f4;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  font-weight: 500;
+}
+
+.help-cat-btn:hover {
+  background: #5600c8;
+}
+
+.help-section {
+  margin-bottom: 50px;
+  background: rgba(8, 8, 14, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 40px;
+}
+
+.help-section h2 {
+  font-size: 1.6rem;
+  color: #c77dff;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.help-section h2 i {
+  font-size: 1.8rem;
+}
+
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-item {
+  background: rgba(20, 9, 37, 0.6);
+  border: 1px solid rgba(106, 0, 244, 0.3);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: #6a00f4;
+}
+
+.faq-question {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 18px 20px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+  background: rgba(106, 0, 244, 0.1);
+}
+
+.faq-question i {
+  color: #6a00f4;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question i {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  padding: 0 20px 20px;
+}
+
+.faq-answer p {
+  color: #dbc6ff;
+  line-height: 1.6;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.faq-answer strong {
+  color: #f0e4ff;
+}
+
+
+@media (max-width: 768px) {
+  .help-section { padding: 30px 20px; }
+  .help-hero { padding: 40px 20px; }
+  .help-hero h1 { font-size: 1.8rem; }
+  .help-categories { gap: 10px; }
+  .help-cat-btn { padding: 8px 16px; font-size: 0.9rem; }
+}

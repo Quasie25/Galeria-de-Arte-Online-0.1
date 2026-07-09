@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería de Arte - Confirmación de Pedido</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../CSS/main.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="login.html" class="nav-logo">Galería de Arte</a>
+        <i class="fa-solid fa-bars menu-icon"></i>
+      </div>
+    </nav>
+
+    <div class="menu-dropdown">
+      <a href="login.html">Inicio</a>
+      <a href="perfil.html">Perfil</a>
+      <div class="submenu">
+        <a href="explorar-obras.html" class="submenu-btn">Explorar Obras ▾</a>
+        <div class="submenu-content">
+          <a href="explorar-obras.html">Todas las Obras</a>
+          <a href="explorar-obras.html">Obras Nuevas</a>
+          <a href="explorar-obras.html">Más Vendidas</a>
+        </div>
+      </div>
+      <a href="sobre-nosotros.html">Sobre Nosotros</a>
+      <a href="ayuda.html">Ayuda</a>
+    </div>
+
+    <main class="checkout-main">
+      <!-- Indicador de pasos -->
+      <div class="checkout-steps">
+        <div class="step done">
+          <span class="step-num"><i class="fa-solid fa-check"></i></span>
+          <span class="step-label">Envío</span>
+        </div>
+        <div class="step-line done"></div>
+        <div class="step done">
+          <span class="step-num"><i class="fa-solid fa-check"></i></span>
+          <span class="step-label">Pago</span>
+        </div>
+        <div class="step-line done"></div>
+        <div class="step active">
+          <span class="step-num">3</span>
+          <span class="step-label">Confirmación</span>
+        </div>
+      </div>
+
+      <section class="checkout-card confirmacion-card">
+        <div class="confirmacion-icono">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <h2>¡Pedido confirmado!</h2>
+        <p class="confirmacion-msg">
+          Gracias por tu compra. Recibirás un correo con los detalles de tu
+          pedido.
+        </p>
+
+        <div class="resumen-pedido">
+          <h3>Resumen del pedido</h3>
+          <div class="resumen-linea">
+            <span>Número de pedido:</span>
+            <span id="num-pedido"
+              >#
+              <script>
+                document.write(Math.floor(Math.random() * 90000) + 10000);
+              </script></span
+            >
+          </div>
+          <div class="resumen-linea">
+            <span>Envío a:</span>
+            <span id="envio-ciudad">—</span>
+          </div>
+          <div class="resumen-linea">
+            <span>Método de pago:</span>
+            <span id="metodo-pago-resumen">—</span>
+          </div>
+        </div>
+
+        <div
+          class="checkout-actions"
+          style="justify-content: center; margin-top: 2rem"
+        >
+          <a href="explorar-obras.html" class="btn-publicar">
+            <i class="fa-solid fa-images"></i> Seguir explorando
+          </a>
+          <a href="perfil.html" class="btn-secundario"> Ver mis pedidos </a>
+        </div>
+      </section>
+    </main>
+
+    <script src="../JS/menu.js"></script>
+    <script>
+      // Leer parámetros de la URL para mostrar resumen
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var ciudad = params.get('ciudad');
+        var metodo = params.get('metodo');
+        if (ciudad)
+          document.getElementById('envio-ciudad').textContent = ciudad;
+        var metodos = {
+          tarjeta: 'Tarjeta de crédito/débito',
+          pse: 'PSE',
+          nequi: 'Nequi',
+        };
+        if (metodo)
+          document.getElementById('metodo-pago-resumen').textContent =
+            metodos[metodo] || metodo;
+      })();
+    </script>
+  </body>
+</html>

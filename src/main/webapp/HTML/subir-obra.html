@@ -14,7 +14,7 @@
     />
 
     <!-- Estilos -->
-    <link rel="stylesheet" href="../CSS/styles.css" />
+    <link rel="stylesheet" href="../CSS/main.css" />
   </head>
 
   <body>
@@ -48,7 +48,11 @@
     <section class="publicar-section" data-rol="artista">
       <div class="publicar-container">
         <h1>Publicar Obra</h1>
-        <form action="../api/obra/subir" method="post" enctype="multipart/form-data">
+        <form
+          action="../api/obra/subir"
+          method="post"
+          enctype="multipart/form-data"
+        >
           <div class="form-group">
             <label>Título de la obra</label>
             <input type="text" placeholder="Ej: Amanecer en la ciudad" />

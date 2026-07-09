@@ -1,0 +1,17 @@
+/* =============================================================
+   BASE — Estilos generales del body
+   ============================================================= */
+
+/* Estilos Generales */
+body {
+  padding-top: 70px;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(90deg, #2a0055, #6a00f4, #c77dff);
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
