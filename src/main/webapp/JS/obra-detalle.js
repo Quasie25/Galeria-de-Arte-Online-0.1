@@ -4,7 +4,7 @@
   var obraId = params.get('id');
   if (!obraId) return;
 
-  fetch('/api/obra?id=' + encodeURIComponent(obraId))
+  fetch('../api/obra?id=' + encodeURIComponent(obraId))
     .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
     .then(function (obra) {
       var img = document.getElementById('obra-imagen');

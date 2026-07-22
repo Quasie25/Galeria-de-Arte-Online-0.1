@@ -1,10 +1,6 @@
 /**
  * componentes.js
  * Maneja navbar, footer, sesión y control de acceso en todas las páginas.
- *
- * Reemplaza menu.js y session-ui.js — no hace falta cargarlos en páginas
- * que ya carguen este archivo.
- *
  * En cada HTML solo se necesita:
  *   <div id="navbar-placeholder"></div>   ← donde va el navbar
  *   <div id="footer-placeholder"></div>   ← donde va el footer
@@ -50,24 +46,21 @@
     '</div>' +
     '</footer>';
 
-  /* ── NAV-RIGHT: íconos según la página actual ────────────────── */
-  function navRight() {
+  /* ── NAV-RIGHT: íconos según rol y página actual ─────────────── */
+  /* CAMBIO 1: ahora recibe 'rol' como parámetro                    */
+  function navRight(rol) {
 
-    // En perfil: configuración + notificaciones (no tiene sentido ir a perfil desde perfil)
-    if (pagina === 'perfil.html') {
-      return (
-        '<div class="nav-right">' +
-        '<a href="notificaciones.html" class="icon-link" aria-label="Notificaciones">' +
-        '<i class="fa-solid fa-bell"></i>' +
-        '</a>' +
-        '<a href="configuracion.html" class="icon-link" aria-label="Configuración">' +
-        '<i class="fa-solid fa-gear"></i>' +
-        '</a>' +
-        '</div>'
-      );
+    // Sin sesión: sin íconos a la derecha
+    if (!rol || rol === 'invitado') {
+      return '<div class="nav-right"></div>';
     }
 
-    // En carrito: favoritos + perfil (no tiene sentido el botón de carrito si ya estás aquí)
+    // Admin: sin carrito ni favoritos
+    if (rol === 'admin') {
+      return '<div class="nav-right"></div>';
+    }
+
+    // En carrito: favoritos + perfil (sin botón de carrito)
     if (pagina === 'carrito.html') {
       return (
         '<div class="nav-right">' +
@@ -76,6 +69,20 @@
         '</a>' +
         '<a href="perfil.html" class="icon-link" aria-label="Perfil">' +
         '<i class="fa-solid fa-user"></i>' +
+        '</a>' +
+        '</div>'
+      );
+    }
+
+    // En perfil: favoritos + carrito (sin botón de perfil)
+    if (pagina === 'perfil.html') {
+      return (
+        '<div class="nav-right">' +
+        '<a href="favoritos.html" class="icon-link" aria-label="Favoritos">' +
+        '<i class="fa-solid fa-heart"></i>' +
+        '</a>' +
+        '<a href="carrito.html" class="icon-link" aria-label="Carrito">' +
+        '<i class="fa-solid fa-cart-shopping"></i>' +
         '</a>' +
         '</div>'
       );
@@ -126,15 +133,21 @@
       items += '<a href="admin-panel.html" style="color:#c77dff;font-weight:700">Panel Admin</a>';
     }
 
-    items += '<hr style="border-color:rgba(255,255,255,0.15);margin:8px 16px">';
-    items += '<a href="configuracion.html">Configuración de cuenta</a>';
+    items += '<a href="sobre-nosotros.html">Sobre Nosotros</a>';
     items += '<a href="ayuda.html">Ayuda</a>';
+    items += '<hr style="border-color:rgba(255,255,255,0.15);margin:8px 16px">';
+
+    if (rol !== 'admin') {
+      items += '<a href="perfil.html">Mi perfil</a>';
+    }
+
     items += '<a href="#" id="btn-logout">Cerrar sesión</a>';
 
     return '<div class="menu-dropdown">' + items + '</div>';
   }
 
   /* ── INYECTAR NAVBAR ─────────────────────────────────────────── */
+  /* CAMBIO 2: navRight ahora recibe el rol                         */
   function inyectarNavbar(rol) {
     var placeholder = document.getElementById('navbar-placeholder');
     if (!placeholder) return;
@@ -145,7 +158,7 @@
       '<a href="explorar-obras.html" class="nav-logo">Galería de Arte</a>' +
       '<i class="fa-solid fa-bars menu-icon"></i>' +
       '</div>' +
-      navRight() +
+      navRight(rol) +
       '</nav>' +
       menuDropdown(rol);
 
@@ -159,7 +172,6 @@
     var dropdown = document.querySelector('.menu-dropdown');
     if (!icon || !dropdown) return;
 
-    // Clonar para quitar listeners anteriores si el menú fue reemplazado
     var iconNuevo = icon.cloneNode(true);
     icon.parentNode.replaceChild(iconNuevo, icon);
 
@@ -198,13 +210,15 @@
     .then(function (s) {
       var rol = s.rol || 'invitado';
 
-      // Actualizar navbar con el menú correcto para este rol
+      // CAMBIO 3: actualizar TANTO el dropdown COMO los íconos de la derecha
       if (rol !== 'invitado') {
         var dropdown = document.querySelector('.menu-dropdown');
-        if (dropdown) {
-          dropdown.outerHTML = menuDropdown(rol);
-          activarMenuHamburguesa();
-        }
+        if (dropdown) dropdown.outerHTML = menuDropdown(rol);
+
+        var navRightEl = document.querySelector('.nav-right');
+        if (navRightEl) navRightEl.outerHTML = navRight(rol);
+
+        activarMenuHamburguesa();
       }
 
       // Mostrar/ocultar elementos según rol

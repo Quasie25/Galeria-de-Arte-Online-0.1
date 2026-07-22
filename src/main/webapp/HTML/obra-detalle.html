@@ -1,74 +1,70 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Galería de Arte - Detalle de Obra</title>
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       referrerpolicy="no-referrer"
+      rel="stylesheet"
     />
-    <link rel="stylesheet" href="../CSS/main.css" />
+    <link href="../CSS/main.css" rel="stylesheet" />
   </head>
-  <body>
+  <body data-proteger="true">
     <!-- NAVBAR -->
     <div id="navbar-placeholder"></div>
-
     <main class="obra-detalle-main">
       <!-- Imagen y datos básicos -->
       <section class="obra-detalle-hero">
         <div class="obra-imagen-container">
           <img
+            alt="Imagen de la obra"
             id="obra-imagen"
             src="../Imagenes/arte1.jpeg"
-            alt="Imagen de la obra"
           />
         </div>
-
         <div class="obra-info">
           <h1 id="obra-titulo">Cargando...</h1>
           <p class="obra-artista">
-            <i class="fa-solid fa-user"></i> <span id="obra-artista"></span>
+            <i class="fa-solid fa-user"> </i>
+            <span id="obra-artista"> </span>
           </p>
           <p class="obra-descripcion" id="obra-descripcion"></p>
           <p class="obra-precio" id="obra-precio"></p>
-
           <!-- Acciones para COMPRADOR / INVITADO -->
           <div class="obra-acciones" data-rol="comprador invitado">
             <button class="btn-publicar" id="btn-agregar-carrito">
-              <i class="fa-solid fa-cart-plus"></i> Agregar al carrito
+              <i class="fa-solid fa-cart-plus"> </i>
+              Agregar al carrito
             </button>
             <button class="btn-favorito" id="btn-favorito">
-              <i class="fa-solid fa-heart"></i> Guardar en favoritos
+              <i class="fa-solid fa-heart"> </i>
+              Guardar en favoritos
             </button>
           </div>
-
           <!-- Acciones para ARTISTA (solo ve su propia obra) -->
           <div
             class="obra-acciones-artista"
             data-rol="artista"
             style="display: none"
           >
-            <a id="btn-editar" href="#" class="btn-publicar">
-              <i class="fa-solid fa-pen-to-square"></i> Editar obra
+            <a class="btn-publicar" href="#" id="btn-editar">
+              <i class="fa-solid fa-pen-to-square"> </i>
+              Editar obra
             </a>
             <button class="btn-favorito btn-eliminar-obra" id="btn-eliminar">
-              <i class="fa-solid fa-trash"></i> Eliminar obra
+              <i class="fa-solid fa-trash"> </i>
+              Eliminar obra
             </button>
           </div>
         </div>
       </section>
     </main>
-
     <!-- FOOTER -->
-
     <div id="footer-placeholder"></div>
-
     <script src="../JS/componentes.js"></script>
-    <script src="../JS/menu.js"></script>
-    <script src="../JS/session-ui.js"></script>
     <script src="../JS/obra-detalle.js"></script>
   </body>
 </html>

@@ -1,68 +1,41 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Galería de Arte - Favoritos</title>
     <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
     />
-    <link rel="stylesheet" href="../CSS/main.css" />
+    <link href="../CSS/main.css" rel="stylesheet" />
   </head>
-  <body>
-    <nav class="navbar">
-      <div class="nav-left">
-        <a href="explorar-obras.html" class="nav-logo">Galería de Arte</a>
-        <i class="fa-solid fa-bars menu-icon"></i>
-      </div>
-      <div class="nav-right">
-        <a href="carrito.html" class="icon-link" aria-label="Carrito">
-          <i class="fa-solid fa-cart-shopping"></i>
-        </a>
-      </div>
-    </nav>
-
-    <div class="menu-dropdown">
-      <a href="explorar-obras.html">Inicio</a>
-      <a href="perfil.html">Perfil</a>
-      <div class="submenu">
-        <a href="explorar-obras.html" class="submenu-btn">Explorar Obras ▾</a>
-        <div class="submenu-content">
-          <a href="explorar-obras.html">Todas las Obras</a>
-        </div>
-      </div>
-      <a href="sobre-nosotros.html">Sobre Nosotros</a>
-      <a href="ayuda.html">Ayuda</a>
-    </div>
-
+  <body data-proteger="true">
+    <div id="navbar-placeholder"></div>
     <main class="main-section">
       <section class="main-header">
         <h1>Tus obras favoritas</h1>
         <p>Las piezas que has guardado para volver a verlas.</p>
       </section>
-
       <section class="container">
-        <div id="favoritos-invitado" class="estado-vacio" style="display: none">
+        <div class="estado-vacio" id="favoritos-invitado" style="display: none">
           <p>
-            Debes <a href="login.html">iniciar sesión</a> para ver tus
-            favoritos.
+            Debes
+            <a href="login.html"> iniciar sesión </a>
+            para ver tus favoritos.
           </p>
         </div>
-
-        <div id="favoritos-vacio" class="estado-vacio" style="display: none">
+        <div class="estado-vacio" id="favoritos-vacio" style="display: none">
           <p>
             Todavía no has guardado ninguna obra.
-            <a href="explorar-obras.html">Explorar obras</a>
+            <a href="explorar-obras.html"> Explorar obras </a>
           </p>
         </div>
-
-        <div id="lista-favoritos" class="galeria"></div>
+        <div class="galeria" id="lista-favoritos"></div>
       </section>
     </main>
-
-    <footer class="footer"></footer>
-    <script src="../JS/menu.js"></script>
+    <div id="footer-placeholder"></div>
+    <script src="../JS/componentes.js"></script>
     <script src="../JS/favoritos.js"></script>
   </body>
 </html>

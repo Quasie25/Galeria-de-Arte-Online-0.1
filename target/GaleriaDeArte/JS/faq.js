@@ -7,14 +7,14 @@
   preguntas.forEach((btn) => {
     btn.addEventListener('click', () => {
       const item = btn.parentElement;
-      const isOpen = item.classList.contains('open');
+      const isOpen = item.classList.contains('active');
 
       document
-        .querySelectorAll('.faq-item.open')
-        .forEach((i) => i.classList.remove('open'));
+        .querySelectorAll('.faq-item.active')
+        .forEach((i) => i.classList.remove('active'));
 
       if (!isOpen) {
-        item.classList.add('open');
+        item.classList.add('active');
       }
     });
   });

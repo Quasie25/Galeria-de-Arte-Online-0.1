@@ -1,69 +1,49 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Galería de Arte - Método de Pago</title>
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       referrerpolicy="no-referrer"
+      rel="stylesheet"
     />
-    <link rel="stylesheet" href="../CSS/main.css" />
+    <link href="../CSS/main.css" rel="stylesheet" />
   </head>
-  <body>
-    <nav class="navbar">
-      <div class="nav-left">
-        <a href="login.html" class="nav-logo">Galería de Arte</a>
-        <i class="fa-solid fa-bars menu-icon"></i>
-      </div>
-    </nav>
-
-    <div class="menu-dropdown">
-      <a href="login.html">Inicio</a>
-      <a href="perfil.html">Perfil</a>
-      <div class="submenu">
-        <a href="explorar-obras.html" class="submenu-btn">Explorar Obras ▾</a>
-        <div class="submenu-content">
-          <a href="explorar-obras.html">Todas las Obras</a>
-          <a href="explorar-obras.html">Obras Nuevas</a>
-          <a href="explorar-obras.html">Más Vendidas</a>
-        </div>
-      </div>
-      <a href="sobre-nosotros.html">Sobre Nosotros</a>
-      <a href="ayuda.html">Ayuda</a>
-    </div>
-
+  <body data-proteger="true">
+    <div id="navbar-placeholder"></div>
     <main class="checkout-main">
       <!-- Indicador de pasos -->
       <div class="checkout-steps">
         <div class="step done">
-          <span class="step-num"><i class="fa-solid fa-check"></i></span>
-          <span class="step-label">Envío</span>
+          <span class="step-num">
+            <i class="fa-solid fa-check"> </i>
+          </span>
+          <span class="step-label"> Envío </span>
         </div>
         <div class="step-line done"></div>
         <div class="step active">
-          <span class="step-num">2</span>
-          <span class="step-label">Pago</span>
+          <span class="step-num"> 2 </span>
+          <span class="step-label"> Pago </span>
         </div>
         <div class="step-line"></div>
         <div class="step">
-          <span class="step-num">3</span>
-          <span class="step-label">Confirmación</span>
+          <span class="step-num"> 3 </span>
+          <span class="step-label"> Confirmación </span>
         </div>
       </div>
-
       <section class="checkout-card">
         <h2>Método de Pago</h2>
-        <form id="form-pago" action="checkout-confirmacion.html" method="get">
+        <form action="checkout-confirmacion.html" id="form-pago" method="get">
           <div class="form-group">
-            <label>Método</label>
+            <label> Método </label>
             <select
               id="metodo-pago"
               name="metodo"
-              required
               onchange="mostrarFormPago(this.value)"
+              required=""
             >
               <option value="">Selecciona...</option>
               <option value="tarjeta">Tarjeta de crédito / débito</option>
@@ -71,52 +51,50 @@
               <option value="nequi">Nequi</option>
             </select>
           </div>
-
           <!-- Tarjeta -->
-          <div id="pago-tarjeta" class="pago-bloque" style="display: none">
+          <div class="pago-bloque" id="pago-tarjeta" style="display: none">
             <div class="form-group">
-              <label>Número de tarjeta</label>
+              <label> Número de tarjeta </label>
               <input
-                type="text"
+                maxlength="19"
                 name="tarjeta_num"
                 placeholder="0000 0000 0000 0000"
-                maxlength="19"
+                type="text"
               />
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label>Vencimiento</label>
+                <label> Vencimiento </label>
                 <input
-                  type="text"
+                  maxlength="5"
                   name="tarjeta_exp"
                   placeholder="MM/AA"
-                  maxlength="5"
+                  type="text"
                 />
               </div>
               <div class="form-group">
-                <label>CVV</label>
+                <label> CVV </label>
                 <input
-                  type="text"
+                  maxlength="4"
                   name="tarjeta_cvv"
                   placeholder="123"
-                  maxlength="4"
+                  type="text"
                 />
               </div>
             </div>
             <div class="form-group">
-              <label>Nombre en la tarjeta</label>
+              <label> Nombre en la tarjeta </label>
               <input
-                type="text"
                 name="tarjeta_nombre"
                 placeholder="Nombre del titular"
+                type="text"
               />
             </div>
           </div>
-
           <!-- PSE -->
-          <div id="pago-pse" class="pago-bloque" style="display: none">
+          <div class="pago-bloque" id="pago-pse" style="display: none">
             <div class="form-group">
-              <label>Banco</label>
+              <label> Banco </label>
               <select name="pse_banco">
                 <option value="">Selecciona tu banco</option>
                 <option>Bancolombia</option>
@@ -127,38 +105,34 @@
               </select>
             </div>
             <div class="form-group">
-              <label>Tipo de cuenta</label>
+              <label> Tipo de cuenta </label>
               <select name="pse_tipo">
                 <option value="ahorros">Ahorros</option>
                 <option value="corriente">Corriente</option>
               </select>
             </div>
           </div>
-
           <!-- Nequi -->
-          <div id="pago-nequi" class="pago-bloque" style="display: none">
+          <div class="pago-bloque" id="pago-nequi" style="display: none">
             <div class="form-group">
-              <label>Número de celular Nequi</label>
+              <label> Número de celular Nequi </label>
               <input
-                type="tel"
+                maxlength="12"
                 name="nequi_cel"
                 placeholder="300 000 0000"
-                maxlength="12"
+                type="tel"
               />
             </div>
           </div>
-
           <div class="checkout-actions">
-            <a href="checkout-envio.html" class="btn-secundario">← Volver</a>
-            <button type="submit" class="btn-publicar">
+            <a class="btn-secundario" href="checkout-envio.html"> ← Volver </a>
+            <button class="btn-publicar" type="submit">
               Confirmar pedido →
             </button>
           </div>
         </form>
       </section>
     </main>
-
-    <script src="../JS/menu.js"></script>
     <script>
       function mostrarFormPago(metodo) {
         ['tarjeta', 'pse', 'nequi'].forEach(function (m) {
@@ -167,5 +141,7 @@
         });
       }
     </script>
+    <div id="footer-placeholder"></div>
+    <script src="../JS/componentes.js"></script>
   </body>
 </html>

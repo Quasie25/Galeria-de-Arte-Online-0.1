@@ -1,96 +1,41 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Galería de Arte - Página no encontrada</title>
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       referrerpolicy="no-referrer"
+      rel="stylesheet"
     />
-    <link rel="stylesheet" href="../CSS/main.css" />
+    <link href="../CSS/main.css" rel="stylesheet" />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="nav-left">
-        <a href="login.html" class="nav-logo">Galería de Arte</a>
-        <i class="fa-solid fa-bars menu-icon"></i>
-      </div>
-
-      <div class="nav-right">
-        <a href="login.html" class="login-link">Inicio de sesión</a>
-        <a href="registro.html" class="btn-register">Registro</a>
-      </div>
-    </nav>
-
+    <div id="navbar-placeholder"></div>
     <!-- MENÚ DESPLEGABLE -->
-    <div class="menu-dropdown">
-      <a href="explorar-obras.html">Inicio</a>
-      <a href="explorar-obras.html">Explorar Obras</a>
-      <a href="sobre-nosotros.html">Sobre Nosotros</a>
-      <a href="ayuda.html">Ayuda</a>
-    </div>
-
     <!-- MAIN CONTENT -->
     <div class="error-page">
       <main class="container" style="padding: 60px 20px; text-align: center">
         <i
           class="fa-solid fa-triangle-exclamation"
-          style="font-size: 48px"
           font-align="center"
-        ></i>
+          style="font-size: 48px"
+        >
+        </i>
         <h1 style="margin-top: 20px">Página no encontrada</h1>
         <p style="margin: 16px 0">
           La ruta que buscas no existe o fue movida. Puedes volver al inicio
           para seguir explorando obras.
         </p>
-        <a href="explorar-obras.html" class="btn-login-main"
-          >Volver al inicio</a
-        >
+        <a class="btn-login-main" href="explorar-obras.html">
+          Volver al inicio
+        </a>
       </main>
     </div>
-
     <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-section">
-          <i class="fas fa-store footer-logo"></i>
-          <p>
-            Interfaz diseñada para exhibir, comprar y vender obras de arte de
-            manera fácil y segura.
-          </p>
-          <p>Síguenos en nuestras redes</p>
-          <div class="social-icons">
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-youtube"></i>
-          </div>
-        </div>
-
-        <div class="footer-section">
-          <h3>Explorar</h3>
-          <div class="footer-links">
-            <a href="explorar-obras.html" class="footer-link">Inicio</a>
-            <a href="sobre-nosotros.html" class="footer-link">Sobre Nosotros</a>
-            <a href="explorar-obras.html" class="footer-link">Explorar Obras</a>
-            <a href="ayuda.html" class="footer-link">Ayuda</a>
-          </div>
-        </div>
-        <div class="footer-section">
-          <h3>Únete a nuestro boletín semanal</h3>
-          <p>
-            Recibe promociones exclusivas y actualizaciones directamente en tu
-            correo.
-          </p>
-          <div class="newsletter">
-            <input type="email" placeholder="Escribe tu correo aquí" />
-            <button>Suscríbete</button>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <div id="footer-placeholder"></div>
+    <script src="../JS/componentes.js"></script>
   </body>
 </html>
