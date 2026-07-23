@@ -21,48 +21,7 @@
         </p>
       </div>
       <section class="lista-productos">
-        <div class="producto" data-id="1">
-          <img alt="Obra 1" class="img-producto" src="../Imagenes/arte1.jpeg" />
-          <div class="info-producto">
-            <h3 class="nombre">Obra abstracta</h3>
-            <p class="precio" data-precio="250000">250.000 COP</p>
-            <div class="cantidad-control">
-              <button class="menos">−</button>
-              <input
-                class="input-cantidad"
-                min="1"
-                readonly=""
-                type="number"
-                value="1"
-              />
-              <button class="mas">+</button>
-            </div>
-          </div>
-          <button class="btn-eliminar" title="Eliminar obra">
-            <i class="fa-solid fa-trash"> </i>
-          </button>
-        </div>
-        <div class="producto" data-id="2">
-          <img alt="Obra 2" class="img-producto" src="../Imagenes/arte2.jpeg" />
-          <div class="info-producto">
-            <h3 class="nombre">Retrato moderno</h3>
-            <p class="precio" data-precio="180000">180.000 COP</p>
-            <div class="cantidad-control">
-              <button class="menos">−</button>
-              <input
-                class="input-cantidad"
-                min="1"
-                readonly=""
-                type="number"
-                value="1"
-              />
-              <button class="mas">+</button>
-            </div>
-          </div>
-          <button class="btn-eliminar" title="Eliminar obra">
-            <i class="fa-solid fa-trash"> </i>
-          </button>
-        </div>
+        <!-- Los productos se agregan dinámicamente -->
       </section>
       <aside class="detalle-compra">
         <h2>Resumen de compra</h2>
@@ -84,12 +43,7 @@
           <span> Total: </span>
           <span class="total-precio" id="total"> 0 COP </span>
         </div>
-        <button
-          class="btn-comprar"
-          onclick="window.location.href = 'checkout-envio.html'"
-        >
-          Finalizar compra
-        </button>
+        <button>Finalizar compra</button>
       </aside>
     </main>
     <div id="footer-placeholder"></div>

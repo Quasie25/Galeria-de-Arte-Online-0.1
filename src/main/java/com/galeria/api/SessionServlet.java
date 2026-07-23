@@ -11,6 +11,7 @@ import java.util.Map;
 
 @WebServlet("/api/session")
 public class SessionServlet extends HttpServlet {
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         HttpSession session = request.getSession(true);
@@ -28,5 +29,14 @@ public class SessionServlet extends HttpServlet {
 
         String json = "{\"rol\":\"" + JsonUtils.escape(rol) + "\",\"carritoVacio\":" + carritoVacio + "}";
         JsonUtils.writeJson(response, json);
+    }
+
+    @Override
+    protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        HttpSession session = request.getSession(false);
+        if (session != null) {
+            session.invalidate();
+        }
+        JsonUtils.writeJson(response, "{\"ok\":true}");
     }
 }

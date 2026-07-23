@@ -50,9 +50,14 @@
   /* CAMBIO 1: ahora recibe 'rol' como parámetro                    */
   function navRight(rol) {
 
-    // Sin sesión: sin íconos a la derecha
+    // Sin sesión: mostrar botones de login y registro
     if (!rol || rol === 'invitado') {
-      return '<div class="nav-right"></div>';
+      return (
+        '<div class="nav-right">' +
+        '<a href="login.html" class="login-link">Inicio de sesión</a>' +
+        '<a href="registro.html" class="btn-register">Registro</a>' +
+        '</div>'
+      );
     }
 
     // Admin: sin carrito ni favoritos

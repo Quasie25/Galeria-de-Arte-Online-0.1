@@ -141,6 +141,8 @@
         .then((data) => {
           if (!data.valido) {
             alert('No fue posible validar la compra. Revisa tu carrito.');
+          } else {
+            window.location.href = 'checkout-envio.html';
           }
         })
         .catch((error) => {

@@ -47,7 +47,7 @@ public class LoginServlet extends HttpServlet {
                         "SELECT id, nombre, rol FROM usuarios WHERE email = ? AND password = ? AND estado = 'activo'")) {
 
             ps.setString(1, email.trim().toLowerCase());
-            ps.setString(2, password); // TODO: comparar con hash bcrypt cuando se implemente
+            ps.setString(2, password); // TODO:comparar con hash bcrypt cuando se implemente
 
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
